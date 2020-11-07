@@ -1,0 +1,38 @@
+body {
+    --color-bg: #ddd;
+    --color-texto: #EE6352;
+}
+
+body.dark-theme {
+    --color-bg: rgb(47, 47, 47);
+    --color-texto: #ffb847;
+}
+
+body.dark-theme img {
+    filter: brightness(.8) contrast(1.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --color-bg: rgb(47, 47, 47);
+        --color-texto: #ffb847;
+    }
+
+    body.light-theme {
+        --color-bg: #ddd;
+        --color-texto: #EE6352;
+    }
+
+    img {
+        filter: brightness(.8) contrast(1.2);
+    }
+    
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+h1 {
+    color: var(--color-texto);
+}
